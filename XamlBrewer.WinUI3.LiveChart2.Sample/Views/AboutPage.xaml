@@ -1,0 +1,23 @@
+﻿<Page x:Class="XamlBrewer.WinUI3.LiveCharts2.Sample.Views.AboutPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d"
+      Background="Transparent">
+
+    <Grid Margin="40 40 20 80"
+          ColumnSpacing="0"
+          RowSpacing="0">
+        <TextBlock FontSize="20">
+            <Run Text="Sample demonstrating " /><Hyperlink NavigateUri="https://github.com/HavenDV/H.OxyPlot">H.OxyPlot</Hyperlink><Run Text=" in a WinUI 3 Desktop application:" />
+            <LineBreak />
+            <Run>* Hello World</Run><LineBreak />
+            <Run>* Model Gallery</Run><LineBreak />
+            <Run>* Interactive Model</Run><LineBreak />
+            <Run>* Theming</Run><LineBreak />
+            <LineBreak /><LineBreak />
+            <Run Text="All diagrams are from the " /><Hyperlink NavigateUri="https://github.com/oxyplot/oxyplot/tree/develop/Source/Examples">official OxyPlot Samples</Hyperlink><Run>.</Run>
+        </TextBlock>
+    </Grid>
+</Page>

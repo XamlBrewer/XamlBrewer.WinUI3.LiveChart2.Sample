@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "XamlBrewer.WinUI3.LiveCharts2.Sample (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "XamlBrewer.WinUI3.LiveCharts2.Sample (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
