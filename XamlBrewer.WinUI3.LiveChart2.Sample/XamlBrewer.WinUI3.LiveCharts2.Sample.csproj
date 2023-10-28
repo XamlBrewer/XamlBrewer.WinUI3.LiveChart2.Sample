@@ -21,8 +21,11 @@
     <None Remove="Shell.xaml" />
     <None Remove="Views\AboutPage.xaml" />
     <None Remove="Views\Bars\Basic\View.xaml" />
+    <None Remove="Views\Bars\DelayedAnimation\View.xaml" />
     <None Remove="Views\Bars\Race\View.xaml" />
     <None Remove="Views\HomePage.xaml" />
+    <None Remove="Views\Lines\Straight\View.xaml" />
+    <None Remove="Views\Pies\Pushout\View.xaml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -58,6 +61,10 @@
     <Page Update="Views\AboutPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Update="Views\Bars\DelayedAnimation\View.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\Bars\Race\View.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
@@ -67,6 +74,14 @@
     </Page>
     <Page Update="Views\Bars\Basic\View.xaml">
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Views\Lines\Straight\View.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Pies\Pushout\View.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
     </Page>
     <None Update="Views\GalleryPage.xaml">
       <Generator>MSBuild:Compile</Generator>
