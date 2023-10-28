@@ -12,10 +12,17 @@
         <vm:HelloWorldViewModel />
     </Page.DataContext>
 
-    <Grid Margin="0 0 0 80">
+    <Grid>
+        <!-- LiveCharts2 Logo -->
+        <Image Source="/Assets/LiveCharts2Logo.png"
+               VerticalAlignment="Bottom"
+               HorizontalAlignment="Left"
+               Height="48" />
+
+        <!-- Chart -->
         <lvc:CartesianChart x:Name="Chart"
                             Series="{Binding Series}"
-                            ActualThemeChanged="Chart_ActualThemeChanged">
-        </lvc:CartesianChart>
+                            ActualThemeChanged="Chart_ActualThemeChanged"
+                            Margin="0 0 0 80" />
     </Grid>
 </Page>

@@ -17,6 +17,7 @@
     <None Remove="Assets\Beer.ico" />
     <None Remove="Assets\Gallery.png" />
     <None Remove="Assets\Home.png" />
+    <None Remove="Assets\LiveCharts2Logo.png" />
     <None Remove="Shell.xaml" />
     <None Remove="Views\AboutPage.xaml" />
     <None Remove="Views\HomePage.xaml" />

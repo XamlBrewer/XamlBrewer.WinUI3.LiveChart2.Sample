@@ -6,18 +6,22 @@
       mc:Ignorable="d"
       Background="Transparent">
 
-    <Grid Margin="40 40 20 80"
-          ColumnSpacing="0"
-          RowSpacing="0">
-        <TextBlock FontSize="20">
-            <Run Text="Sample demonstrating " /><Hyperlink NavigateUri="https://github.com/HavenDV/H.OxyPlot">H.OxyPlot</Hyperlink><Run Text=" in a WinUI 3 Desktop application:" />
+    <Grid>
+        <!-- LiveCharts2 Logo -->
+        <Image Source="/Assets/LiveCharts2Logo.png"
+               VerticalAlignment="Bottom"
+               HorizontalAlignment="Left"
+               Height="48" />
+
+        <TextBlock FontSize="20"
+                   Margin="40 40 20 80">
+            <Run Text="Sample demonstrating " /><Hyperlink NavigateUri="https://livecharts.dev/">LiveCharts2</Hyperlink><Run Text=" in a WinUI 3 Desktop application:" />
             <LineBreak />
             <Run>* Hello World</Run><LineBreak />
             <Run>* Model Gallery</Run><LineBreak />
-            <Run>* Interactive Model</Run><LineBreak />
             <Run>* Theming</Run><LineBreak />
             <LineBreak /><LineBreak />
-            <Run Text="All diagrams are from the " /><Hyperlink NavigateUri="https://github.com/oxyplot/oxyplot/tree/develop/Source/Examples">official OxyPlot Samples</Hyperlink><Run>.</Run>
+            <Run Text="All diagrams are from the " /><Hyperlink NavigateUri="https://livecharts.dev/docs/winui/2.0.0-rc1/gallery">official LiveCharts2 gallery</Hyperlink><Run>.</Run>
         </TextBlock>
     </Grid>
 </Page>
