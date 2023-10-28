@@ -14,7 +14,7 @@ namespace XamlBrewer.WinUI3.LiveCharts2.Sample
 
         internal INavigation Navigation => shell;
 
-        internal UIElement AppRoot => shell.AppRoot;
+        internal FrameworkElement AppRoot => shell.AppRoot;
 
         protected override void OnLaunched(LaunchActivatedEventArgs args)
         {

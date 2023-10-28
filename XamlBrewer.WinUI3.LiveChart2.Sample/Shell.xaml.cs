@@ -16,7 +16,7 @@ namespace XamlBrewer.WinUI3.LiveCharts2.Sample
             ApplyTheme();
         }
 
-        internal UIElement AppRoot => Root;
+        internal FrameworkElement AppRoot => Root;
 
         private void ToggleButton_Click(object sender, RoutedEventArgs e)
         {

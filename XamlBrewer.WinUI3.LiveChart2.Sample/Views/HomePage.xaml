@@ -4,8 +4,18 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       mc:Ignorable="d"
+      xmlns:lvc="using:LiveChartsCore.SkiaSharpView.WinUI"
+      xmlns:vm="using:XamlBrewer.WinUI3.LiveCharts2.Sample.ViewModels"
       Background="Transparent">
 
+    <Page.DataContext>
+        <vm:HelloWorldViewModel />
+    </Page.DataContext>
+
     <Grid Margin="0 0 0 80">
+        <lvc:CartesianChart x:Name="Chart"
+                            Series="{Binding Series}"
+                            ActualThemeChanged="Chart_ActualThemeChanged">
+        </lvc:CartesianChart>
     </Grid>
 </Page>
