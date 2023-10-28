@@ -20,6 +20,8 @@
     <None Remove="Assets\LiveCharts2Logo.png" />
     <None Remove="Shell.xaml" />
     <None Remove="Views\AboutPage.xaml" />
+    <None Remove="Views\Bars\Basic\View.xaml" />
+    <None Remove="Views\Bars\Race\View.xaml" />
     <None Remove="Views\HomePage.xaml" />
   </ItemGroup>
 
@@ -56,7 +58,14 @@
     <Page Update="Views\AboutPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Update="Views\Bars\Race\View.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\HomePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Views\Bars\Basic\View.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <None Update="Views\GalleryPage.xaml">

@@ -10,14 +10,15 @@
                 <!-- Other merged dictionaries here -->
             </ResourceDictionary.MergedDictionaries>
             <!-- Other app resources here -->
-            <Color x:Key="SystemAccentColorDark3">#082568</Color>
-            <Color x:Key="SystemAccentColorDark2">#082568</Color>
-            <Color x:Key="SystemAccentColorDark1">#0D3184</Color>
-            <Color x:Key="SystemAccentColor">#1240AB</Color>
-            <Color x:Key="SystemAccentColorLight1">#365BB0</Color>
-            <Color x:Key="SystemAccentColorLight2">#5777C0</Color>
-            <Color x:Key="SystemAccentColorLight3">#5777C0</Color>
-            <Color x:Key="SystemAccentColorComplementary">#FFAA00</Color>
+            <!-- Custom Accent Colors -->
+            <Color x:Key="SystemAccentColorDark3">#304f50</Color>
+            <Color x:Key="SystemAccentColorDark2">#395e60</Color>
+            <Color x:Key="SystemAccentColorDark1">#005B9F</Color>
+            <Color x:Key="SystemAccentColor">#0086C3</Color>
+            <Color x:Key="SystemAccentColorLight1">#4BA2C5</Color>
+            <Color x:Key="SystemAccentColorLight2">#9fc4c6</Color>
+            <Color x:Key="SystemAccentColorLight3">#bfd8d9</Color>
+            <Color x:Key="SystemAccentColorComplementary">#a02d64</Color>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

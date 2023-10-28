@@ -3,414 +3,427 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:lvc="using:LiveChartsCore.SkiaSharpView.WinUI"
+      xmlns:vbb="using:WinUISample.Bars.Basic"
+      xmlns:vbr="using:WinUISample.Bars.Race"
       mc:Ignorable="d"
       Background="Transparent">
+    <Grid>
+        <!-- LiveCharts2 Logo -->
+        <Image Source="/Assets/LiveCharts2Logo.png"
+               VerticalAlignment="Bottom"
+               HorizontalAlignment="Left"
+               Height="48" />
 
-    <GridView x:Name="GridView"
-              SelectionMode="None"
-              VerticalAlignment="Stretch"
-              Margin="0">
-        <GridView.ItemsPanel>
-            <ItemsPanelTemplate>
-                <VariableSizedWrapGrid ItemHeight="360"
-                                       ItemWidth="420"
-                                       Orientation="Horizontal" />
-            </ItemsPanelTemplate>
-        </GridView.ItemsPanel>
+        <!-- Gallery -->
+        <GridView x:Name="GridView"
+                  SelectionMode="None"
+                  VerticalAlignment="Stretch"
+                  Margin="0 0 0 80">
+            <GridView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <VariableSizedWrapGrid ItemHeight="360"
+                                           ItemWidth="420"
+                                           Orientation="Horizontal" />
+                </ItemsPanelTemplate>
+            </GridView.ItemsPanel>
 
-        <!-- Bar Series -->
-        <GridViewItem CornerRadius="4"
-                      Padding="0"
-                      Margin="0 0 20 20">
-            <GridViewItem.Transitions>
-                <TransitionCollection>
-                    <RepositionThemeTransition />
-                </TransitionCollection>
-            </GridViewItem.Transitions>
-            <Grid Width="400"
-                  Height="340"
-                  Margin="0"
-                  CornerRadius="4"
-                  RowDefinitions="auto, *">
-                <Border Margin="0"
-                        BorderThickness="0"
-                        Background="{ThemeResource SystemAccentColor}"
-                        Opacity=".2"
-                        Grid.RowSpan="10" />
-                <Border Margin="0"
-                        BorderThickness="0"
-                        Background="{ThemeResource SystemAccentColor}"
-                        Opacity=".5" />
+            <!-- Bars - Basic -->
+            <GridViewItem CornerRadius="4"
+                          Padding="0"
+                          Margin="0 0 20 20">
+                <GridViewItem.Transitions>
+                    <TransitionCollection>
+                        <RepositionThemeTransition />
+                    </TransitionCollection>
+                </GridViewItem.Transitions>
+                <Grid Width="400"
+                      Height="340"
+                      Margin="0"
+                      CornerRadius="4"
+                      RowDefinitions="auto, *">
+                    <Border Margin="0"
+                            BorderThickness="0"
+                            Background="{ThemeResource SystemAccentColor}"
+                            Opacity=".2"
+                            Grid.RowSpan="10" />
+                    <Border Margin="0"
+                            BorderThickness="0"
+                            Background="{ThemeResource SystemAccentColor}"
+                            Opacity=".5" />
 
-                <TextBlock Text="Bar"
-                           Padding="0"
-                           HorizontalAlignment="Stretch"
-                           FontSize="16"
-                           Margin="10 5" />
-            </Grid>
-        </GridViewItem>
+                    <TextBlock Text="Bars - Basic"
+                               Padding="0"
+                               HorizontalAlignment="Stretch"
+                               FontSize="16"
+                               Margin="10 5" />
+                    <vbb:View Grid.Row="1" />
+                </Grid>
+            </GridViewItem>
 
-        <!-- Heat Map (Bitmap) -->
-        <GridViewItem CornerRadius="4"
-                      Padding="0"
-                      Margin="0 0 20 20">
-            <GridViewItem.Transitions>
-                <TransitionCollection>
-                    <RepositionThemeTransition />
-                </TransitionCollection>
-            </GridViewItem.Transitions>
-            <Grid Width="400"
-                  Height="340"
-                  Margin="0"
-                  CornerRadius="4"
-                  RowDefinitions="auto, *">
-                <Border Margin="0"
-                        BorderThickness="0"
-                        Background="{ThemeResource SystemAccentColor}"
-                        Opacity=".2"
-                        Grid.RowSpan="10" />
-                <Border Margin="0"
-                        BorderThickness="0"
-                        Background="{ThemeResource SystemAccentColor}"
-                        Opacity=".5" />
+            <!-- Bars - Race -->
+            <GridViewItem CornerRadius="4"
+                          Padding="0"
+                          Margin="0 0 20 20">
+                <GridViewItem.Transitions>
+                    <TransitionCollection>
+                        <RepositionThemeTransition />
+                    </TransitionCollection>
+                </GridViewItem.Transitions>
+                <Grid Width="400"
+                      Height="340"
+                      Margin="0"
+                      CornerRadius="4"
+                      RowDefinitions="auto, *">
+                    <Border Margin="0"
+                            BorderThickness="0"
+                            Background="{ThemeResource SystemAccentColor}"
+                            Opacity=".2"
+                            Grid.RowSpan="10" />
+                    <Border Margin="0"
+                            BorderThickness="0"
+                            Background="{ThemeResource SystemAccentColor}"
+                            Opacity=".5" />
 
-                <TextBlock Text="Bitmap Heatmap"
-                           Padding="0"
-                           HorizontalAlignment="Stretch"
-                           FontSize="16"
-                           Margin="10 5" />
+                    <TextBlock Text="Bars - Race"
+                               Padding="0"
+                               HorizontalAlignment="Stretch"
+                               FontSize="16"
+                               Margin="10 5" />
 
-            </Grid>
-        </GridViewItem>
+                    <vbr:View Grid.Row="1" />
+                </Grid>
+            </GridViewItem>
 
-        <!-- Heat Map (Rectangular) -->
-        <GridViewItem CornerRadius="4"
-                      Padding="0"
-                      Margin="0 0 20 20">
-            <GridViewItem.Transitions>
-                <TransitionCollection>
-                    <RepositionThemeTransition />
-                </TransitionCollection>
-            </GridViewItem.Transitions>
-            <Grid Width="400"
-                  Height="340"
-                  Margin="0"
-                  CornerRadius="4"
-                  RowDefinitions="auto, *">
-                <Border Margin="0"
-                        BorderThickness="0"
-                        Background="{ThemeResource SystemAccentColor}"
-                        Opacity=".2"
-                        Grid.RowSpan="10" />
-                <Border Margin="0"
-                        BorderThickness="0"
-                        Background="{ThemeResource SystemAccentColor}"
-                        Opacity=".5" />
+            <!-- Heat Map (Rectangular) -->
+            <GridViewItem CornerRadius="4"
+                          Padding="0"
+                          Margin="0 0 20 20">
+                <GridViewItem.Transitions>
+                    <TransitionCollection>
+                        <RepositionThemeTransition />
+                    </TransitionCollection>
+                </GridViewItem.Transitions>
+                <Grid Width="400"
+                      Height="340"
+                      Margin="0"
+                      CornerRadius="4"
+                      RowDefinitions="auto, *">
+                    <Border Margin="0"
+                            BorderThickness="0"
+                            Background="{ThemeResource SystemAccentColor}"
+                            Opacity=".2"
+                            Grid.RowSpan="10" />
+                    <Border Margin="0"
+                            BorderThickness="0"
+                            Background="{ThemeResource SystemAccentColor}"
+                            Opacity=".5" />
 
-                <TextBlock Text="Rectangular Heatmap"
-                           Padding="0"
-                           HorizontalAlignment="Stretch"
-                           FontSize="16"
-                           Margin="10 5" />
+                    <TextBlock Text="Rectangular Heatmap"
+                               Padding="0"
+                               HorizontalAlignment="Stretch"
+                               FontSize="16"
+                               Margin="10 5" />
 
-            </Grid>
-        </GridViewItem>
+                </Grid>
+            </GridViewItem>
 
-        <!-- Contour Series -->
-        <GridViewItem CornerRadius="4"
-                      Padding="0"
-                      Margin="0 0 20 20">
-            <GridViewItem.Transitions>
-                <TransitionCollection>
-                    <RepositionThemeTransition />
-                </TransitionCollection>
-            </GridViewItem.Transitions>
-            <Grid Width="400"
-                  Height="340"
-                  Margin="0"
-                  CornerRadius="4"
-                  RowDefinitions="auto, *">
-                <Border Margin="0"
-                        BorderThickness="0"
-                        Background="{ThemeResource SystemAccentColor}"
-                        Opacity=".2"
-                        Grid.RowSpan="10" />
-                <Border Margin="0"
-                        BorderThickness="0"
-                        Background="{ThemeResource SystemAccentColor}"
-                        Opacity=".5" />
+            <!-- Contour Series -->
+            <GridViewItem CornerRadius="4"
+                          Padding="0"
+                          Margin="0 0 20 20">
+                <GridViewItem.Transitions>
+                    <TransitionCollection>
+                        <RepositionThemeTransition />
+                    </TransitionCollection>
+                </GridViewItem.Transitions>
+                <Grid Width="400"
+                      Height="340"
+                      Margin="0"
+                      CornerRadius="4"
+                      RowDefinitions="auto, *">
+                    <Border Margin="0"
+                            BorderThickness="0"
+                            Background="{ThemeResource SystemAccentColor}"
+                            Opacity=".2"
+                            Grid.RowSpan="10" />
+                    <Border Margin="0"
+                            BorderThickness="0"
+                            Background="{ThemeResource SystemAccentColor}"
+                            Opacity=".5" />
 
-                <TextBlock Text="Contour"
-                           Padding="0"
-                           HorizontalAlignment="Stretch"
-                           FontSize="16"
-                           Margin="10 5" />
+                    <TextBlock Text="Contour"
+                               Padding="0"
+                               HorizontalAlignment="Stretch"
+                               FontSize="16"
+                               Margin="10 5" />
 
-            </Grid>
-        </GridViewItem>
+                </Grid>
+            </GridViewItem>
 
-        <!-- Function Series -->
-        <GridViewItem CornerRadius="4"
-                      Padding="0"
-                      Margin="0 0 20 20">
-            <GridViewItem.Transitions>
-                <TransitionCollection>
-                    <RepositionThemeTransition />
-                </TransitionCollection>
-            </GridViewItem.Transitions>
-            <Grid Width="400"
-                  Height="340"
-                  Margin="0"
-                  CornerRadius="4"
-                  RowDefinitions="auto, *">
-                <Border Margin="0"
-                        BorderThickness="0"
-                        Background="{ThemeResource SystemAccentColor}"
-                        Opacity=".2"
-                        Grid.RowSpan="10" />
-                <Border Margin="0"
-                        BorderThickness="0"
-                        Background="{ThemeResource SystemAccentColor}"
-                        Opacity=".5" />
+            <!-- Function Series -->
+            <GridViewItem CornerRadius="4"
+                          Padding="0"
+                          Margin="0 0 20 20">
+                <GridViewItem.Transitions>
+                    <TransitionCollection>
+                        <RepositionThemeTransition />
+                    </TransitionCollection>
+                </GridViewItem.Transitions>
+                <Grid Width="400"
+                      Height="340"
+                      Margin="0"
+                      CornerRadius="4"
+                      RowDefinitions="auto, *">
+                    <Border Margin="0"
+                            BorderThickness="0"
+                            Background="{ThemeResource SystemAccentColor}"
+                            Opacity=".2"
+                            Grid.RowSpan="10" />
+                    <Border Margin="0"
+                            BorderThickness="0"
+                            Background="{ThemeResource SystemAccentColor}"
+                            Opacity=".5" />
 
-                <TextBlock Text="Functions"
-                           Padding="0"
-                           HorizontalAlignment="Stretch"
-                           FontSize="16"
-                           Margin="10 5" />
+                    <TextBlock Text="Functions"
+                               Padding="0"
+                               HorizontalAlignment="Stretch"
+                               FontSize="16"
+                               Margin="10 5" />
 
-            </Grid>
-        </GridViewItem>
+                </Grid>
+            </GridViewItem>
 
-        <!-- Stem Series -->
-        <GridViewItem CornerRadius="4"
-                      Padding="0"
-                      Margin="0 0 20 20">
-            <GridViewItem.Transitions>
-                <TransitionCollection>
-                    <RepositionThemeTransition />
-                </TransitionCollection>
-            </GridViewItem.Transitions>
-            <Grid Width="400"
-                  Height="340"
-                  Margin="0"
-                  CornerRadius="4"
-                  RowDefinitions="auto, *">
-                <Border Margin="0"
-                        BorderThickness="0"
-                        Background="{ThemeResource SystemAccentColor}"
-                        Opacity=".2"
-                        Grid.RowSpan="10" />
-                <Border Margin="0"
-                        BorderThickness="0"
-                        Background="{ThemeResource SystemAccentColor}"
-                        Opacity=".5" />
+            <!-- Stem Series -->
+            <GridViewItem CornerRadius="4"
+                          Padding="0"
+                          Margin="0 0 20 20">
+                <GridViewItem.Transitions>
+                    <TransitionCollection>
+                        <RepositionThemeTransition />
+                    </TransitionCollection>
+                </GridViewItem.Transitions>
+                <Grid Width="400"
+                      Height="340"
+                      Margin="0"
+                      CornerRadius="4"
+                      RowDefinitions="auto, *">
+                    <Border Margin="0"
+                            BorderThickness="0"
+                            Background="{ThemeResource SystemAccentColor}"
+                            Opacity=".2"
+                            Grid.RowSpan="10" />
+                    <Border Margin="0"
+                            BorderThickness="0"
+                            Background="{ThemeResource SystemAccentColor}"
+                            Opacity=".5" />
 
-                <TextBlock Text="Stem"
-                           Padding="0"
-                           HorizontalAlignment="Stretch"
-                           FontSize="16"
-                           Margin="10 5" />
+                    <TextBlock Text="Stem"
+                               Padding="0"
+                               HorizontalAlignment="Stretch"
+                               FontSize="16"
+                               Margin="10 5" />
 
-            </Grid>
-        </GridViewItem>
+                </Grid>
+            </GridViewItem>
 
-        <!-- Pie Series -->
-        <GridViewItem CornerRadius="4"
-                      Padding="0"
-                      Margin="0 0 20 20">
-            <GridViewItem.Transitions>
-                <TransitionCollection>
-                    <RepositionThemeTransition />
-                </TransitionCollection>
-            </GridViewItem.Transitions>
-            <Grid Width="400"
-                  Height="340"
-                  Margin="0"
-                  CornerRadius="4"
-                  RowDefinitions="auto, *">
-                <Border Margin="0"
-                        BorderThickness="0"
-                        Background="{ThemeResource SystemAccentColor}"
-                        Opacity=".2"
-                        Grid.RowSpan="10" />
-                <Border Margin="0"
-                        BorderThickness="0"
-                        Background="{ThemeResource SystemAccentColor}"
-                        Opacity=".5" />
+            <!-- Pie Series -->
+            <GridViewItem CornerRadius="4"
+                          Padding="0"
+                          Margin="0 0 20 20">
+                <GridViewItem.Transitions>
+                    <TransitionCollection>
+                        <RepositionThemeTransition />
+                    </TransitionCollection>
+                </GridViewItem.Transitions>
+                <Grid Width="400"
+                      Height="340"
+                      Margin="0"
+                      CornerRadius="4"
+                      RowDefinitions="auto, *">
+                    <Border Margin="0"
+                            BorderThickness="0"
+                            Background="{ThemeResource SystemAccentColor}"
+                            Opacity=".2"
+                            Grid.RowSpan="10" />
+                    <Border Margin="0"
+                            BorderThickness="0"
+                            Background="{ThemeResource SystemAccentColor}"
+                            Opacity=".5" />
 
-                <TextBlock Text="Pie"
-                           Padding="0"
-                           HorizontalAlignment="Stretch"
-                           FontSize="16"
-                           Margin="10 5" />
+                    <TextBlock Text="Pie"
+                               Padding="0"
+                               HorizontalAlignment="Stretch"
+                               FontSize="16"
+                               Margin="10 5" />
 
-            </Grid>
-        </GridViewItem>
+                </Grid>
+            </GridViewItem>
 
-        <!-- TwoColorArea Series -->
-        <GridViewItem CornerRadius="4"
-                      Padding="0"
-                      Margin="0 0 20 20">
-            <GridViewItem.Transitions>
-                <TransitionCollection>
-                    <RepositionThemeTransition />
-                </TransitionCollection>
-            </GridViewItem.Transitions>
-            <Grid Width="400"
-                  Height="340"
-                  Margin="0"
-                  CornerRadius="4"
-                  RowDefinitions="auto, *">
-                <Border Margin="0"
-                        BorderThickness="0"
-                        Background="{ThemeResource SystemAccentColor}"
-                        Opacity=".2"
-                        Grid.RowSpan="10" />
-                <Border Margin="0"
-                        BorderThickness="0"
-                        Background="{ThemeResource SystemAccentColor}"
-                        Opacity=".5" />
+            <!-- TwoColorArea Series -->
+            <GridViewItem CornerRadius="4"
+                          Padding="0"
+                          Margin="0 0 20 20">
+                <GridViewItem.Transitions>
+                    <TransitionCollection>
+                        <RepositionThemeTransition />
+                    </TransitionCollection>
+                </GridViewItem.Transitions>
+                <Grid Width="400"
+                      Height="340"
+                      Margin="0"
+                      CornerRadius="4"
+                      RowDefinitions="auto, *">
+                    <Border Margin="0"
+                            BorderThickness="0"
+                            Background="{ThemeResource SystemAccentColor}"
+                            Opacity=".2"
+                            Grid.RowSpan="10" />
+                    <Border Margin="0"
+                            BorderThickness="0"
+                            Background="{ThemeResource SystemAccentColor}"
+                            Opacity=".5" />
 
-                <TextBlock Text="Two Color Area"
-                           Padding="0"
-                           HorizontalAlignment="Stretch"
-                           FontSize="16"
-                           Margin="10 5" />
+                    <TextBlock Text="Two Color Area"
+                               Padding="0"
+                               HorizontalAlignment="Stretch"
+                               FontSize="16"
+                               Margin="10 5" />
 
-            </Grid>
-        </GridViewItem>
+                </Grid>
+            </GridViewItem>
 
-        <!-- Multi-Bar Series -->
-        <GridViewItem CornerRadius="4"
-                      Padding="0"
-                      Margin="0 0 20 20">
-            <GridViewItem.Transitions>
-                <TransitionCollection>
-                    <RepositionThemeTransition />
-                </TransitionCollection>
-            </GridViewItem.Transitions>
-            <Grid Width="400"
-                  Height="340"
-                  Margin="0"
-                  CornerRadius="4"
-                  RowDefinitions="auto, *">
-                <Border Margin="0"
-                        BorderThickness="0"
-                        Background="{ThemeResource SystemAccentColor}"
-                        Opacity=".2"
-                        Grid.RowSpan="10" />
-                <Border Margin="0"
-                        BorderThickness="0"
-                        Background="{ThemeResource SystemAccentColor}"
-                        Opacity=".5" />
+            <!-- Multi-Bar Series -->
+            <GridViewItem CornerRadius="4"
+                          Padding="0"
+                          Margin="0 0 20 20">
+                <GridViewItem.Transitions>
+                    <TransitionCollection>
+                        <RepositionThemeTransition />
+                    </TransitionCollection>
+                </GridViewItem.Transitions>
+                <Grid Width="400"
+                      Height="340"
+                      Margin="0"
+                      CornerRadius="4"
+                      RowDefinitions="auto, *">
+                    <Border Margin="0"
+                            BorderThickness="0"
+                            Background="{ThemeResource SystemAccentColor}"
+                            Opacity=".2"
+                            Grid.RowSpan="10" />
+                    <Border Margin="0"
+                            BorderThickness="0"
+                            Background="{ThemeResource SystemAccentColor}"
+                            Opacity=".5" />
 
-                <TextBlock Text="Multi-Bar Multi-Axis"
-                           Padding="0"
-                           HorizontalAlignment="Stretch"
-                           FontSize="16"
-                           Margin="10 5" />
+                    <TextBlock Text="Multi-Bar Multi-Axis"
+                               Padding="0"
+                               HorizontalAlignment="Stretch"
+                               FontSize="16"
+                               Margin="10 5" />
 
-            </Grid>
-        </GridViewItem>
+                </Grid>
+            </GridViewItem>
 
-        <!-- Line Series -->
-        <GridViewItem CornerRadius="4"
-                      Padding="0"
-                      Margin="0 0 20 20">
-            <GridViewItem.Transitions>
-                <TransitionCollection>
-                    <RepositionThemeTransition />
-                </TransitionCollection>
-            </GridViewItem.Transitions>
-            <Grid Width="400"
-                  Height="340"
-                  Margin="0"
-                  CornerRadius="4"
-                  RowDefinitions="auto, *">
-                <Border Margin="0"
-                        BorderThickness="0"
-                        Background="{ThemeResource SystemAccentColor}"
-                        Opacity=".2"
-                        Grid.RowSpan="10" />
-                <Border Margin="0"
-                        BorderThickness="0"
-                        Background="{ThemeResource SystemAccentColor}"
-                        Opacity=".5" />
+            <!-- Line Series -->
+            <GridViewItem CornerRadius="4"
+                          Padding="0"
+                          Margin="0 0 20 20">
+                <GridViewItem.Transitions>
+                    <TransitionCollection>
+                        <RepositionThemeTransition />
+                    </TransitionCollection>
+                </GridViewItem.Transitions>
+                <Grid Width="400"
+                      Height="340"
+                      Margin="0"
+                      CornerRadius="4"
+                      RowDefinitions="auto, *">
+                    <Border Margin="0"
+                            BorderThickness="0"
+                            Background="{ThemeResource SystemAccentColor}"
+                            Opacity=".2"
+                            Grid.RowSpan="10" />
+                    <Border Margin="0"
+                            BorderThickness="0"
+                            Background="{ThemeResource SystemAccentColor}"
+                            Opacity=".5" />
 
-                <TextBlock Text="Line"
-                           Padding="0"
-                           HorizontalAlignment="Stretch"
-                           FontSize="16"
-                           Margin="10 5" />
+                    <TextBlock Text="Line"
+                               Padding="0"
+                               HorizontalAlignment="Stretch"
+                               FontSize="16"
+                               Margin="10 5" />
 
-            </Grid>
-        </GridViewItem>
+                </Grid>
+            </GridViewItem>
 
-        <!-- Line and Area Series -->
-        <GridViewItem CornerRadius="4"
-                      Padding="0"
-                      Margin="0 0 20 20">
-            <GridViewItem.Transitions>
-                <TransitionCollection>
-                    <RepositionThemeTransition />
-                </TransitionCollection>
-            </GridViewItem.Transitions>
-            <Grid Width="400"
-                  Height="340"
-                  Margin="0"
-                  CornerRadius="4"
-                  RowDefinitions="auto, *">
-                <Border Margin="0"
-                        BorderThickness="0"
-                        Background="{ThemeResource SystemAccentColor}"
-                        Opacity=".2"
-                        Grid.RowSpan="10" />
-                <Border Margin="0"
-                        BorderThickness="0"
-                        Background="{ThemeResource SystemAccentColor}"
-                        Opacity=".5" />
+            <!-- Line and Area Series -->
+            <GridViewItem CornerRadius="4"
+                          Padding="0"
+                          Margin="0 0 20 20">
+                <GridViewItem.Transitions>
+                    <TransitionCollection>
+                        <RepositionThemeTransition />
+                    </TransitionCollection>
+                </GridViewItem.Transitions>
+                <Grid Width="400"
+                      Height="340"
+                      Margin="0"
+                      CornerRadius="4"
+                      RowDefinitions="auto, *">
+                    <Border Margin="0"
+                            BorderThickness="0"
+                            Background="{ThemeResource SystemAccentColor}"
+                            Opacity=".2"
+                            Grid.RowSpan="10" />
+                    <Border Margin="0"
+                            BorderThickness="0"
+                            Background="{ThemeResource SystemAccentColor}"
+                            Opacity=".5" />
 
-                <TextBlock Text="Line and Area"
-                           Padding="0"
-                           HorizontalAlignment="Stretch"
-                           FontSize="16"
-                           Margin="10 5" />
+                    <TextBlock Text="Line and Area"
+                               Padding="0"
+                               HorizontalAlignment="Stretch"
+                               FontSize="16"
+                               Margin="10 5" />
 
-            </Grid>
-        </GridViewItem>
+                </Grid>
+            </GridViewItem>
 
-        <!-- Line and Area Series -->
-        <GridViewItem CornerRadius="4"
-                      Padding="0"
-                      Margin="0 0 20 20">
-            <GridViewItem.Transitions>
-                <TransitionCollection>
-                    <RepositionThemeTransition />
-                </TransitionCollection>
-            </GridViewItem.Transitions>
-            <Grid Width="400"
-                  Height="340"
-                  Margin="0"
-                  CornerRadius="4"
-                  RowDefinitions="auto, *">
-                <Border Margin="0"
-                        BorderThickness="0"
-                        Background="{ThemeResource SystemAccentColor}"
-                        Opacity=".2"
-                        Grid.RowSpan="10" />
-                <Border Margin="0"
-                        BorderThickness="0"
-                        Background="{ThemeResource SystemAccentColor}"
-                        Opacity=".5" />
+            <!-- Line and Area Series -->
+            <GridViewItem CornerRadius="4"
+                          Padding="0"
+                          Margin="0 0 20 20">
+                <GridViewItem.Transitions>
+                    <TransitionCollection>
+                        <RepositionThemeTransition />
+                    </TransitionCollection>
+                </GridViewItem.Transitions>
+                <Grid Width="400"
+                      Height="340"
+                      Margin="0"
+                      CornerRadius="4"
+                      RowDefinitions="auto, *">
+                    <Border Margin="0"
+                            BorderThickness="0"
+                            Background="{ThemeResource SystemAccentColor}"
+                            Opacity=".2"
+                            Grid.RowSpan="10" />
+                    <Border Margin="0"
+                            BorderThickness="0"
+                            Background="{ThemeResource SystemAccentColor}"
+                            Opacity=".5" />
 
-                <TextBlock Text="Area"
-                           Padding="0"
-                           HorizontalAlignment="Stretch"
-                           FontSize="16"
-                           Margin="10 5" />
+                    <TextBlock Text="Area"
+                               Padding="0"
+                               HorizontalAlignment="Stretch"
+                               FontSize="16"
+                               Margin="10 5" />
 
-            </Grid>
-        </GridViewItem>
-    </GridView>
+                </Grid>
+            </GridViewItem>
+        </GridView>
+    </Grid>
 </Page>
