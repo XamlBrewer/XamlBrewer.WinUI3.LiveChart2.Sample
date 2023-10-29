@@ -40,11 +40,11 @@ namespace XamlBrewer.WinUI3.LiveCharts2.Sample
             // Theme change refinements (e.g. content dialogs and title bar).
             if ((Application.Current as App).Settings.IsLightTheme)
             {
-                LiveCharts.Configure(config => config.AddSkiaSharp().AddLightTheme());
+                LiveCharts.Configure(config => config.AddLightTheme());
             }
             else
             {
-                LiveCharts.Configure(config => config.AddSkiaSharp().AddDarkTheme());
+                LiveCharts.Configure(config => config.AddDarkTheme());
             }
         }
     }

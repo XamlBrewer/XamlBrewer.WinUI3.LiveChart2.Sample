@@ -25,11 +25,14 @@
     <None Remove="Views\Bars\Race\View.xaml" />
     <None Remove="Views\Design\LinearGradients\View.xaml" />
     <None Remove="Views\Events\AddPointOnClick\View.xaml" />
+    <None Remove="Views\General\Scrollable\View.xaml" />
     <None Remove="Views\General\VisualElements\View.xaml" />
     <None Remove="Views\HomePage.xaml" />
     <None Remove="Views\Lines\Straight\View.xaml" />
+    <None Remove="Views\Maps\World\View.xaml" />
     <None Remove="Views\Pies\AngularGauge\View.xaml" />
     <None Remove="Views\Pies\Pushout\View.xaml" />
+    <None Remove="Views\Scatter\Bubbles\View.xaml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -81,6 +84,10 @@
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Views\General\Scrollable\View.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\General\VisualElements\View.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
@@ -95,11 +102,19 @@
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Views\Maps\World\View.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\Pies\AngularGauge\View.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Pies\Pushout\View.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Scatter\Bubbles\View.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
