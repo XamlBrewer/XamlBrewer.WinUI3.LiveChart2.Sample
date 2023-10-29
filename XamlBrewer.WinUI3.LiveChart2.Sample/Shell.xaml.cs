@@ -1,4 +1,6 @@
-﻿using Microsoft.UI.Xaml;
+﻿using LiveChartsCore;
+using LiveChartsCore.SkiaSharpView;
+using Microsoft.UI.Xaml;
 
 namespace XamlBrewer.WinUI3.LiveCharts2.Sample
 {
@@ -32,9 +34,18 @@ namespace XamlBrewer.WinUI3.LiveCharts2.Sample
             var settings = (Application.Current as App).Settings;
             Root.RequestedTheme = settings.IsLightTheme ? ElementTheme.Light : ElementTheme.Dark;
         }
+
         private void Root_ActualThemeChanged(FrameworkElement sender, object args)
         {
             // Theme change refinements (e.g. content dialogs and title bar).
+            if ((Application.Current as App).Settings.IsLightTheme)
+            {
+                LiveCharts.Configure(config => config.AddSkiaSharp().AddLightTheme());
+            }
+            else
+            {
+                LiveCharts.Configure(config => config.AddSkiaSharp().AddDarkTheme());
+            }
         }
     }
 }
