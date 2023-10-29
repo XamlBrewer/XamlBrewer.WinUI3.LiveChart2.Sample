@@ -10,6 +10,8 @@
       xmlns:vpp="using:WinUISample.Pies.Pushout"
       xmlns:vpa="using:WinUISample.Pies.AngularGauge"
       xmlns:vdl="using:WinUISample.Design.LinearGradients"
+      xmlns:vgv="using:WinUISample.General.VisualElements"
+      xmlns:vea="using:WinUISample.Events.AddPointOnClick"
       mc:Ignorable="d"
       Background="Transparent">
     <Grid>
@@ -236,6 +238,40 @@
                 </Grid>
             </GridViewItem>
 
+            <!-- General  Visual Elements -->
+            <GridViewItem CornerRadius="4"
+                          Padding="0"
+                          Margin="0 0 20 20">
+                <GridViewItem.Transitions>
+                    <TransitionCollection>
+                        <RepositionThemeTransition />
+                    </TransitionCollection>
+                </GridViewItem.Transitions>
+                <Grid Width="400"
+                      Height="340"
+                      Margin="0"
+                      CornerRadius="4"
+                      RowDefinitions="auto, *">
+                    <Border Margin="0"
+                            BorderThickness="0"
+                            Background="{ThemeResource SystemAccentColor}"
+                            Opacity=".2"
+                            Grid.RowSpan="10" />
+                    <Border Margin="0"
+                            BorderThickness="0"
+                            Background="{ThemeResource SystemAccentColor}"
+                            Opacity=".5" />
+
+                    <TextBlock Text="Pies - Angular Gauge"
+                               Padding="0"
+                               HorizontalAlignment="Stretch"
+                               FontSize="16"
+                               Margin="10 5" />
+
+                    <vgv:View Grid.Row="1" />
+                </Grid>
+            </GridViewItem>
+
             <!-- Design - Linear Gradients -->
             <GridViewItem CornerRadius="4"
                           Padding="0"
@@ -267,6 +303,40 @@
                                Margin="10 5" />
 
                     <vdl:View Grid.Row="1" />
+                </Grid>
+            </GridViewItem>
+
+            <!-- Events - Add Point On Click -->
+            <GridViewItem CornerRadius="4"
+                          Padding="0"
+                          Margin="0 0 20 20">
+                <GridViewItem.Transitions>
+                    <TransitionCollection>
+                        <RepositionThemeTransition />
+                    </TransitionCollection>
+                </GridViewItem.Transitions>
+                <Grid Width="400"
+                      Height="340"
+                      Margin="0"
+                      CornerRadius="4"
+                      RowDefinitions="auto, *">
+                    <Border Margin="0"
+                            BorderThickness="0"
+                            Background="{ThemeResource SystemAccentColor}"
+                            Opacity=".2"
+                            Grid.RowSpan="10" />
+                    <Border Margin="0"
+                            BorderThickness="0"
+                            Background="{ThemeResource SystemAccentColor}"
+                            Opacity=".5" />
+
+                    <TextBlock Text="Events - Add Point On Click"
+                               Padding="0"
+                               HorizontalAlignment="Stretch"
+                               FontSize="16"
+                               Margin="10 5" />
+
+                    <vea:View Grid.Row="1" />
                 </Grid>
             </GridViewItem>
         </GridView>
