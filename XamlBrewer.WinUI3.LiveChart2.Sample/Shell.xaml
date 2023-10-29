@@ -41,6 +41,14 @@
                                     ShowAsMonochrome="False" />
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
+                <NavigationViewItem Content="Functions"
+                                    Tag="XamlBrewer.WinUI3.LiveCharts2.Sample.Views.FunctionsPage"
+                                    ToolTipService.ToolTip="Functions">
+                    <NavigationViewItem.Icon>
+                        <BitmapIcon UriSource="/Assets/Batman.png"
+                                    ShowAsMonochrome="False" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
             </NavigationView.MenuItems>
             <NavigationView.FooterMenuItems>
                 <NavigationViewItem Content="About"

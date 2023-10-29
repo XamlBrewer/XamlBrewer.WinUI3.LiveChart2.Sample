@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page x:Class="XamlBrewer.WinUI3.LiveCharts2.Sample.Views.FunctionsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:vm="using:XamlBrewer.WinUI3.LiveCharts2.Sample.ViewModels"
+      xmlns:lvc="using:LiveChartsCore.SkiaSharpView.WinUI"
+      mc:Ignorable="d"
+      Background="Transparent">
+
+    <Page.DataContext>
+        <vm:FunctionsViewModel />
+    </Page.DataContext>
+
+    <Grid>
+        <!-- LiveCharts2 Logo -->
+        <Image Source="/Assets/LiveCharts2Logo.png"
+               VerticalAlignment="Bottom"
+               HorizontalAlignment="Left"
+               Height="48" />
+
+        <!-- Chart -->
+        <lvc:CartesianChart x:Name="Chart"
+                            Series="{Binding Series}"
+                            Margin="0 0 0 80" />
+    </Grid>
+</Page>

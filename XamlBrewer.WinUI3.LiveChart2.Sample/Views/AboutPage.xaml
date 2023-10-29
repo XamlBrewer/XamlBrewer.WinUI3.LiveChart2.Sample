@@ -18,8 +18,9 @@
             <Run Text="Sample demonstrating " /><Hyperlink NavigateUri="https://livecharts.dev/">LiveCharts2</Hyperlink><Run Text=" in a WinUI 3 Desktop application:" />
             <LineBreak />
             <Run>* Hello World</Run><LineBreak />
-            <Run>* Model Gallery</Run><LineBreak />
             <Run>* Theming</Run><LineBreak />
+            <Run>* Model Gallery</Run><LineBreak />
+            <Run>* Plotting Functions</Run><LineBreak />
             <LineBreak /><LineBreak />
             <Run Text="All diagrams are from the " /><Hyperlink NavigateUri="https://livecharts.dev/docs/winui/2.0.0-rc1/gallery">official LiveCharts2 gallery</Hyperlink><Run>.</Run>
         </TextBlock>
