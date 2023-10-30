@@ -1,6 +1,8 @@
 ﻿using LiveChartsCore;
 using LiveChartsCore.Defaults;
 using LiveChartsCore.SkiaSharpView;
+using LiveChartsCore.SkiaSharpView.Painting;
+using SkiaSharp;
 using System;
 using System.Collections.Generic;
 
@@ -21,30 +23,36 @@ namespace XamlBrewer.WinUI3.LiveCharts2.Sample.ViewModels
                 {
                     Values =  FunctionValues(batFunction1, -7, +7, .01),
                     GeometrySize = 0,
-                    Fill = null
+                    Fill = null,
+                    Name = "na na"
                 },
             new LineSeries<ObservablePoint>
                 {
                     Values =  FunctionValues(batFunction2, -7, +7, .01),
                     GeometrySize = 0,
-                    Fill = null
+                    Fill = null,
+                    Name = "na na"
                 },
             new LineSeries<ObservablePoint>
                 {
                     Values =  FunctionValues(batFunction3, -7, +7, .01),
                     GeometrySize = 0,
-                    Fill = null
+                    Fill = null,
+                    Name = "na na"
                 },
            new LineSeries<ObservablePoint>
                 {
                     Values =  FunctionValues(batFunction4, -7, +7, .01),
                     GeometrySize = 0,
-                    Fill = null
+                    Fill = null,
+                    Name = "na na"
                 }
             };
         }
 
         public ISeries[] Series { get; set; }
+
+        public SolidColorPaint LegendTextPaint => new SolidColorPaint(SKColors.Gray);
 
         private static ObservablePoint[] FunctionValues(Func<double, double> function, double x0, double x1, double dx)
         {
