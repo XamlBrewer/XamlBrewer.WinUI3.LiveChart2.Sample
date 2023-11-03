@@ -54,16 +54,13 @@ namespace XamlBrewer.WinUI3.LiveCharts2.Sample.ViewModels
         
         public ISeries[] Series { get; set; }
 
-        private static ObservablePoint[] FunctionValues(Func<double, double> function, double x0, double x1, double dx)
+        private static IEnumerable<ObservablePoint> FunctionValues(Func<double, double> function, double x0, double x1, double dx)
         {
-            var values = new List<ObservablePoint>();
-            for (double i = x0; i < x1; i += dx)
+            for (double x = x0; x < x1; x += dx)
             {
-                var y = function(i);
-                values.Add(new ObservablePoint(i, double.IsNaN(y) ? null : y));
+                var y = function(x);
+                yield return(new ObservablePoint(x, double.IsNaN(y) ? null : y));
             }
-
-            return values.ToArray();
         }
     }
 }
