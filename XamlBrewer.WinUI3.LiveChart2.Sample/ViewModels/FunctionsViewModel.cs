@@ -19,39 +19,39 @@ namespace XamlBrewer.WinUI3.LiveCharts2.Sample.ViewModels
 
             Series = new ISeries[]
             {
-            new LineSeries<ObservablePoint>
-                {
-                    Values =  FunctionValues(batFunction1, -7, +7, .01),
-                    GeometrySize = 0,
-                    Fill = null,
-                    Name = "na na"
-                },
-            new LineSeries<ObservablePoint>
-                {
-                    Values =  FunctionValues(batFunction2, -7, +7, .01),
-                    GeometrySize = 0,
-                    Fill = null,
-                    Name = "na na"
-                },
-            new LineSeries<ObservablePoint>
-                {
-                    Values =  FunctionValues(batFunction3, -7, +7, .01),
-                    GeometrySize = 0,
-                    Fill = null,
-                    Name = "na na"
-                },
-           new LineSeries<ObservablePoint>
-                {
-                    Values =  FunctionValues(batFunction4, -7, +7, .01),
-                    GeometrySize = 0,
-                    Fill = null,
-                    Name = "na na"
-                }
-            };
+                new LineSeries<ObservablePoint>
+                    {
+                        Values =  FunctionValues(batFunction1, -7, +7, .01),
+                        GeometrySize = 0,
+                        Fill = null,
+                        Name = "na na"
+                    },
+                new LineSeries<ObservablePoint>
+                    {
+                        Values =  FunctionValues(batFunction2, -7, +7, .01),
+                        GeometrySize = 0,
+                        Fill = null,
+                        Name = "na na"
+                    },
+                new LineSeries<ObservablePoint>
+                    {
+                        Values =  FunctionValues(batFunction3, -7, +7, .01),
+                        GeometrySize = 0,
+                        Fill = null,
+                        Name = "na na"
+                    },
+               new LineSeries<ObservablePoint>
+                    {
+                        Values =  FunctionValues(batFunction4, -7, +7, .01),
+                        GeometrySize = 0,
+                        Fill = null,
+                        Name = "na na"
+                    }
+                };
         }
 
         public static SolidColorPaint LegendTextPaint => new(SKColors.Gray);
-        
+
         public ISeries[] Series { get; set; }
 
         private static IEnumerable<ObservablePoint> FunctionValues(Func<double, double> function, double x0, double x1, double dx)
@@ -59,7 +59,7 @@ namespace XamlBrewer.WinUI3.LiveCharts2.Sample.ViewModels
             for (double x = x0; x < x1; x += dx)
             {
                 var y = function(x);
-                yield return(new ObservablePoint(x, double.IsNaN(y) ? null : y));
+                yield return new ObservablePoint(x, double.IsNaN(y) ? null : y);
             }
         }
     }
