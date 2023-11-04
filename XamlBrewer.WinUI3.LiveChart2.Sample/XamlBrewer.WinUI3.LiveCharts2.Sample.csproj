@@ -25,6 +25,7 @@
     <None Remove="Views\Bars\DelayedAnimation\View.xaml" />
     <None Remove="Views\Bars\Race\View.xaml" />
     <None Remove="Views\Design\LinearGradients\View.xaml" />
+    <None Remove="Views\Design\RadialGradients\View.xaml" />
     <None Remove="Views\Events\AddPointOnClick\View.xaml" />
     <None Remove="Views\FunctionsPage.xaml" />
     <None Remove="Views\General\Scrollable\View.xaml" />
@@ -79,6 +80,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Design\LinearGradients\View.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Design\RadialGradients\View.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>

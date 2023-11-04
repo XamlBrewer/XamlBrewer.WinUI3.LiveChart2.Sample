@@ -10,6 +10,7 @@
       xmlns:vpp="using:WinUISample.Pies.Pushout"
       xmlns:vpa="using:WinUISample.Pies.AngularGauge"
       xmlns:vdl="using:WinUISample.Design.LinearGradients"
+      xmlns:vdr="using:WinUISample.Design.RadialGradients"
       xmlns:vgv="using:WinUISample.General.VisualElements"
       xmlns:vea="using:WinUISample.Events.AddPointOnClick"
       xmlns:vgs="using:WinUISample.General.Scrollable"
@@ -411,6 +412,40 @@
                 </Grid>
             </GridViewItem>
 
+            <!-- Design - Radial Gradients -->
+            <GridViewItem CornerRadius="4"
+                          Padding="0"
+                          Margin="0 0 20 20">
+                <GridViewItem.Transitions>
+                    <TransitionCollection>
+                        <RepositionThemeTransition />
+                    </TransitionCollection>
+                </GridViewItem.Transitions>
+                <Grid Width="430"
+                      Height="340"
+                      Margin="0"
+                      CornerRadius="4"
+                      RowDefinitions="auto, *">
+                    <Border Margin="0"
+                            BorderThickness="0"
+                            Background="{ThemeResource SystemAccentColor}"
+                            Opacity=".1"
+                            Grid.RowSpan="10" />
+                    <Border Margin="0"
+                            BorderThickness="0"
+                            Background="{ThemeResource SystemAccentColor}"
+                            Opacity=".2" />
+
+                    <TextBlock Text="Design - Radial Gradients"
+                               Padding="0"
+                               HorizontalAlignment="Stretch"
+                               FontSize="16"
+                               Margin="10 5" />
+
+                    <vdr:View Grid.Row="1" />
+                </Grid>
+            </GridViewItem>            
+            
             <!-- Events - Add Point On Click -->
             <GridViewItem CornerRadius="4"
                           Padding="0"
